@@ -1,5 +1,6 @@
 import random
 
+
 class Card:
     def __init__(self, rank, suit):
         self.rank = rank
@@ -17,11 +18,12 @@ class Card:
             r = "Ace"
         return f"{r} of {self.suit}"
 
+
 class Deck:
-    def __init__(self, numDecks = 1):
+    def __init__(self, num_decks=1):
         self.cards = []
         for card in range(1, 14):
-            for i in range(0, numDecks):
+            for i in range(0, num_decks):
                 self.cards.append(Card(card, "Diamonds"))
                 self.cards.append(Card(card, "Hearts"))
                 self.cards.append(Card(card, "Spades"))
@@ -32,3 +34,6 @@ class Deck:
 
     def shuffle(self):
         random.shuffle(self.cards)
+
+    def is_empty(self):
+        return len(self.cards) == 0

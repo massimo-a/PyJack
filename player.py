@@ -14,7 +14,7 @@ class Player:
         else:
             return ""
 
-    def handValue(self):
+    def hand_value(self):
         tot = 0
         for card in self.hand:
             if card.rank == 11 or card.rank == 12 or card.rank == 13:
@@ -30,5 +30,8 @@ class Player:
                     tot = tot - 10
         return tot
 
-    def resetHand(self):
+    def reset_hand(self):
         self.hand = []
+
+    def has_ace(self):
+        return list(map(lambda x: x.rank == 1, self.hand)).count(True) > 0
