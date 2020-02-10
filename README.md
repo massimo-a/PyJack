@@ -6,8 +6,6 @@ Gives the user the choice of running hundreds of games between two A.I. to see w
 
 The player A.I. should implement a card-counting strategy.
 
-The goal is to also add in the ability to play against the computer yourself.
-
 # Rules
 Dealer hits on soft 17
 
@@ -18,7 +16,3 @@ Blackjack "pays" 2 : 1
 # ToDo
 
 Add in splitting
-
-Player A.I. should count cards
-
-Allow user to play against dealer A.I.
